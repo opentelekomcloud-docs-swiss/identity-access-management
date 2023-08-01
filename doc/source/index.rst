@@ -1,3 +1,8 @@
-==========================================================
-Welcome to the documentation of identity-access-management
-==========================================================
+Identity and Access Management
+==============================
+
+.. directive_wrapper::
+   :class: container-sbv
+
+   .. service_card::
+      :service_type: iam
