@@ -1,3 +1,8 @@
-=======================================================
-Welcome to Identity and Access Management Documentation
-=======================================================
+============================================
+Identity and Access Management - Permissions
+============================================
+
+.. toctree::
+   :maxdepth: 1
+
+   permissions
