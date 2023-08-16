@@ -23,11 +23,21 @@ extensions = [
 
 otcdocs_auto_name = False
 otcdocs_auto_version = False
-otcdocs_search_environment = 'hc_swiss'
 
 project = 'Identity and Access Management'
 otcdocs_repo_name = 'opentelekomcloud-docs-swiss/identity-access-management'
 # Those variables are required for edit/bug links
+
+# Those variables are needed for indexing into OpenSearch
+otcdocs_doc_environment = 'public'
+otcdocs_doc_link = '/identity-access-management/umn/'
+otcdocs_doc_title = 'User Guide'
+otcdocs_doc_type = 'umn'
+otcdocs_service_category = 'security-services'
+otcdocs_service_title = 'Identity and Access Management'
+otcdocs_service_type = 'iam'
+otcdocs_search_environment = 'hc_swiss'
+otcdocs_search_url = "https://opensearch.eco.tsi-dev.otc-service.com/"
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
