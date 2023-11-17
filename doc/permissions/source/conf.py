@@ -23,13 +23,21 @@ extensions = [
 
 otcdocs_auto_name = False
 otcdocs_auto_version = False
-otcdocs_search_environment = 'hc_swiss'
-
 project = 'Identity and Access Management'
-otcdocs_repo_name = 'docs-swiss/identity-access-management'
+otcdocs_repo_name = 'opentelekomcloud-docs-swiss/identity-access-management'
 # Those variables are required for edit/bug links
-otcdocs_git_fqdn = 'gitea.eco.tsi-dev.otc-service.com'
-otcdocs_git_type = 'gitea'
+
+# Those variables are needed for indexing into OpenSearch
+otcdocs_doc_environment = 'public'
+otcdocs_doc_link = '/identity-access-management/permissions/'
+otcdocs_doc_title = 'Permissions'
+otcdocs_doc_type = 'permissions'
+otcdocs_service_category = 'security-services'
+otcdocs_service_title = 'Identity and Access Management'
+otcdocs_service_type = 'iam'
+otcdocs_search_environment = 'hc_swiss'
+otcdocs_search_index = 'search_index_swiss'
+otcdocs_search_url = "https://opensearch.eco.tsi-dev.otc-service.com/"
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -79,9 +87,8 @@ html_theme = 'otcdocs'
 # further. For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    "disable_search": True,
-    "site_name": "Internal Documentation Portal",
-    "logo_url": "https://docs-int.otc-service.com",
+    "site_name": "Swiss Open Telekom Cloud Docs",
+    "logo_url": "https://docs-beta.sc.otc.t-systems.com",
 }
 
 # The name for this set of Sphinx documents.  If None, it defaults to
