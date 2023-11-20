@@ -23,7 +23,6 @@ extensions = [
 
 otcdocs_auto_name = False
 otcdocs_auto_version = False
-
 project = 'Identity and Access Management'
 otcdocs_repo_name = 'opentelekomcloud-docs-swiss/identity-access-management'
 # Those variables are required for edit/bug links
