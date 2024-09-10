@@ -16,6 +16,8 @@
 
 import os
 import sys
+from git import Repo
+from datetime import datetime
 
 extensions = [
     'otcdocstheme',
@@ -89,8 +91,6 @@ html_theme = 'otcdocs'
 # further. For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    "site_name": "Swiss Open Telekom Cloud Docs",
-    "logo_url": "https://docs-beta.sc.otc.t-systems.com",
 }
 
 # The name for this set of Sphinx documents.  If None, it defaults to
@@ -109,3 +109,9 @@ html_copy_source = False
 
 # -- Options for PDF output --------------------------------------------------
 latex_documents = []
+
+# Get the Git commit values for last updated timestamp on each page
+repo = Repo(search_parent_directories=True)
+commit = repo.head.commit
+current_commit_hash = commit.hexsha
+current_commit_time = commit.committed_datetime.strftime('%Y-%m-%d %H:%M')
