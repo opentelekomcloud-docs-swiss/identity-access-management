@@ -16,6 +16,8 @@
 
 import os
 import sys
+from git import Repo
+from datetime import datetime
 
 extensions = [
     'otcdocstheme',
@@ -24,11 +26,22 @@ extensions = [
 
 otcdocs_auto_name = False
 otcdocs_auto_version = False
-otcdocs_search_environment = 'hc_swiss'
 
 project = 'Identity and Access Management'
 otcdocs_repo_name = 'opentelekomcloud-docs-swiss/identity-access-management'
 # Those variables are required for edit/bug links
+
+# Those variables are needed for indexing into OpenSearch
+otcdocs_doc_environment = ''
+otcdocs_doc_link = ''
+otcdocs_doc_title = ''
+otcdocs_doc_type = ''
+otcdocs_service_category = 'security-services'
+otcdocs_service_title = 'Identity and Access Management'
+otcdocs_service_type = 'iam'
+otcdocs_search_environment = 'hc_swiss'
+otcdocs_search_index = 'search_index_swiss'
+otcdocs_search_url = "https://opensearch.eco.tsi-dev.otc-service.com/"
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -78,6 +91,8 @@ html_theme = 'otcdocs'
 # further. For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
+    "site_name": "Swiss Open Telekom Cloud Docs",
+    "logo_url": "https://docs-beta.sc.otc.t-systems.com",
 }
 
 # The name for this set of Sphinx documents.  If None, it defaults to
@@ -96,3 +111,9 @@ html_copy_source = False
 
 # -- Options for PDF output --------------------------------------------------
 latex_documents = []
+
+# Get the Git commit values for last updated timestamp on each page
+repo = Repo(search_parent_directories=True)
+commit = repo.head.commit
+current_commit_hash = commit.hexsha
+current_commit_time = commit.committed_datetime.strftime('%Y-%m-%d %H:%M')

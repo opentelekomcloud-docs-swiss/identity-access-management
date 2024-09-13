@@ -32,9 +32,9 @@ otcdocs_repo_name = 'opentelekomcloud-docs-swiss/identity-access-management'
 
 # Those variables are needed for indexing into OpenSearch
 otcdocs_doc_environment = 'public'
-otcdocs_doc_link = '/identity-access-management/umn/'
-otcdocs_doc_title = 'User Guide'
-otcdocs_doc_type = 'umn'
+otcdocs_doc_link = '/identity-access-management/permissions/'
+otcdocs_doc_title = 'Permissions'
+otcdocs_doc_type = 'permissions'
 otcdocs_service_category = 'security-services'
 otcdocs_service_title = 'Identity and Access Management'
 otcdocs_service_type = 'iam'
@@ -97,7 +97,7 @@ html_theme_options = {
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 
-html_title = "Identity and Access Management - User Guide"
+html_title = "Identity and Access Management - Permissions"
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -111,8 +111,8 @@ html_copy_source = False
 # -- Options for PDF output --------------------------------------------------
 latex_documents = [
     ('index',
-     'iam-umn.tex',
-     u'Identity and Access Management - User Guide',
+     'iam-permissions.tex',
+     u'Identity and Access Management - Permissions',
      u'OpenTelekomCloud', 'manual'),
 ]
 
