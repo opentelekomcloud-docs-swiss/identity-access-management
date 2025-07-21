@@ -7,8 +7,8 @@
     vars:
       sphinx_pdf_files:
         - iam-umn.pdf
-        - iam-api-ref.pdf
         - iam-permissions.pdf
+        - iam-api-ref.pdf
     check:
       jobs:
         - noop
